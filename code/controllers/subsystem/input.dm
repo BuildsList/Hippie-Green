@@ -23,7 +23,7 @@ SUBSYSTEM_DEF(input)
 // This is for when macro sets are eventualy datumized
 /datum/controller/subsystem/input/proc/setup_default_macro_sets()
 	var/list/static/default_macro_sets
-	
+
 	if(default_macro_sets)
 		macro_sets = default_macro_sets
 		return
@@ -32,7 +32,7 @@ SUBSYSTEM_DEF(input)
 		"default" = list(
 			"Tab" = "\".winset \\\"input.focus=true?map.focus=true input.background-color=[COLOR_INPUT_DISABLED]:input.focus=true input.background-color=[COLOR_INPUT_ENABLED]\\\"\"",
 			"F1" = "adminhelp",
-			"F2" = "ooc",
+//			"F2" = "ooc",
 			"F3" = "say",
 			"F4" = "me",
 			"Back" = "\".winset \\\"input.text=\\\"\\\"\\\"\"", // This makes it so backspace can remove default inputs
@@ -44,14 +44,14 @@ SUBSYSTEM_DEF(input)
 			"Ctrl+T" = "say",
 			"Ctrl+O" = "ooc",
 			"F1" = "adminhelp",
-			"F2" = "ooc",
+//			"F2" = "ooc",
 			"F3" = "say",
 			"F4" = "me",
 			),
 		"old_hotkeys" = list(
 			"Tab" = "\".winset \\\"mainwindow.macro=old_default input.focus=true input.background-color=[COLOR_INPUT_ENABLED]\\\"\"",
 			"F1" = "adminhelp",
-			"F2" = "ooc",
+//			"F2" = "ooc",
 			"F3" = "say",
 			"F4" = "me",
 			"Back" = "\".winset \\\"input.text=\\\"\\\"\\\"\"", // This makes it so backspace can remove default inputs

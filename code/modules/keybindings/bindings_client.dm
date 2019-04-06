@@ -15,8 +15,8 @@
 	// Things like taking screenshots, hitting tab, and adminhelps.
 
 	switch(_key)
-		if("O")
-			ooc(verbtextinput("OOC"))
+		if("F2")
+			ooc(verbtextinput("ooc"))
 			return
 		if("F1")
 			if(keys_held["Ctrl"] && keys_held["Shift"]) // Is this command ever used?

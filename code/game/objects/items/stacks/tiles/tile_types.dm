@@ -5,7 +5,7 @@
 	icon = 'icons/obj/tiles.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
 	force = 1
-	throwforce = 1
+	throwforce = 10
 	throw_speed = 3
 	throw_range = 7
 	max_amount = 60

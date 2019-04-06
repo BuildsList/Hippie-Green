@@ -530,26 +530,26 @@
 	goingtodie = FALSE
 
 /* Hippie Bad traits */
-/datum/quirk/flatulence
-	name = "Involuntary flatulence"
-	desc = "A spasm in the patient's sphincter will cause them to uncontrollably fart at random intervals."
-	value = -1
-	gain_text = "<span class='danger'>Your butt starts to twitch!</span>"
-	lose_text = "<span class='notice'>Your butt settles down.</span>"
-	medical_record_text = "Patient has a muscular spasm in their rectal sphincter, gaseous discharge may occour."
+// /datum/quirk/flatulence
+// 	name = "Involuntary flatulence"
+// 	desc = "A spasm in the patient's sphincter will cause them to uncontrollably fart at random intervals."
+// 	value = -1
+// 	gain_text = "<span class='danger'>Your butt starts to twitch!</span>"
+// 	lose_text = "<span class='notice'>Your butt settles down.</span>"
+// 	medical_record_text = "Patient has a muscular spasm in their rectal sphincter, gaseous discharge may occour."
 
-/datum/quirk/flatulence/on_process()
-	var/mob/living/carbon/human/H = quirk_holder
-	if(H)
-		if(prob(3))
-			var/obj/item/organ/butt/B = quirk_holder.getorgan(/obj/item/organ/butt)
-			if(!B)
-				to_chat(quirk_holder, "<span class='warning'>The building pressure in your colon hurts!</span>")
-				quirk_holder.adjustBruteLoss(rand(2,6))
-			else if(prob(1))
-				quirk_holder.emote("superfart")
-			else
-				quirk_holder.emote("fart")
+// /datum/quirk/flatulence/on_process()
+// 	var/mob/living/carbon/human/H = quirk_holder
+// 	if(H)
+// 		if(prob(3))
+// 			var/obj/item/organ/butt/B = quirk_holder.getorgan(/obj/item/organ/butt)
+// 			if(!B)
+// 				to_chat(quirk_holder, "<span class='warning'>The building pressure in your colon hurts!</span>")
+// 				quirk_holder.adjustBruteLoss(rand(2,6))
+// 			else if(prob(1))
+// 				quirk_holder.emote("superfart")
+// 			else
+// 				quirk_holder.emote("fart")
 
 
 /datum/quirk/smallbutt

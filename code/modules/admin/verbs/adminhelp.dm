@@ -201,6 +201,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 		if(admin_number_present <= 0)
 			to_chat(C, "<span class='notice'>No active admins are online, your adminhelp was sent to the admin irc.</span>")
 			heard_by_no_admins = TRUE
+		webhook_send_ahelp(key_name(initiator), msg + " heard by [admin_number_present] admins.")
 
 	GLOB.ahelp_tickets.active_tickets += src
 

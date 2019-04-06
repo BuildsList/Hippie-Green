@@ -35,6 +35,7 @@
 /* Items with ADMINPRIVATE prefixed are stripped from public logs. */
 /proc/log_admin(text)
 	GLOB.admin_log.Add(text)
+	webhook_send_garbage("ADMIN", text)
 	if (CONFIG_GET(flag/log_admin))
 		WRITE_FILE(GLOB.world_game_log, "\[[time_stamp()]]ADMIN: [text]")
 

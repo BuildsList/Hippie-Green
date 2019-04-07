@@ -2,7 +2,6 @@
 
 $include game_options.txt
 $include dbconfig.txt
-$include comms.txt
 $include hippiestation_config.txt
 $include antag_rep.txt
 
@@ -490,3 +489,24 @@ DISABLE_HIGH_POP_MC_MODE_AMOUNT 60
 ##	For reference, Goonstation uses a resolution of 21x15 for it's widescreen mode.
 ##	Do note that changing this value will affect the title screen. The title screen will have to be updated manually if this is changed.
 DEFAULT_VIEW 15x15
+
+webhook_key bestwpwd
+webhook_address 104.248.244.168:1941/api/byond
+
+## Communication key for receiving data through world/Topic(), you don't want to give this out
+COMMS_KEY animusgreentinepobedim
+
+## World address and port for server receiving cross server messages
+## Use '+' to denote spaces in ServerName
+## Repeat this entry to add more servers
+#CROSS_SERVER ServerName byond:\\address:port
+
+## Name that the server calls itself in communications
+#CROSS_COMMS_NAME
+
+## Hub address for tracking stats
+## example: Hubmakerckey.Hubname
+#MEDAL_HUB_ADDRESS
+
+## Password for the hub page
+#MEDAL_HUB_PASSWORD

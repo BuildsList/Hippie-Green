@@ -49,6 +49,8 @@ GLOBAL_VAR_INIT(bypass_tgs_reboot, world.system_type == UNIX && world.byond_buil
 
 	Master.Initialize(10, FALSE, TRUE)
 
+	webhook_send_roundstatus("lobby")
+
 	if(TEST_RUN_PARAMETER in params)
 		HandleTestRun()
 
@@ -198,6 +200,8 @@ GLOBAL_VAR_INIT(bypass_tgs_reboot, world.system_type == UNIX && world.byond_buil
 	qdel(src)	//shut it down
 
 /world/Reboot(reason = 0, fast_track = FALSE)
+	webhook_send_roundstatus("endgame")
+	webhook_send_ooc("REBOOT", "===========================")
 	if (reason || fast_track) //special reboot, do none of the normal stuff
 		if (usr)
 			log_admin("[key_name(usr)] Has requested an immediate world restart via client side debugging tools")

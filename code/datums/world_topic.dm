@@ -139,6 +139,7 @@
 
 /datum/world_topic/status/Run(list/input)
 	. = list()
+	.["who"] = topic_who()
 	.["version"] = GLOB.game_version
 	.["mode"] = GLOB.master_mode
 	.["respawn"] = config ? !CONFIG_GET(flag/norespawn) : FALSE
@@ -160,6 +161,7 @@
 	.["map_name"] = SSmapping.config?.map_name || "Loading..."
 
 	if(key_valid)
+		.["ping"] = get_active_player_count()
 		.["active_players"] = get_active_player_count()
 		if(SSticker.HasRoundStarted())
 			.["real_mode"] = SSticker.mode.name
@@ -181,3 +183,12 @@
 		.["shuttle_timer"] = SSshuttle.emergency.timeLeft()
 		// Shuttle timer, in seconds
 	
+
+/proc/topic_who()
+	var/n = 0
+	var/msg = "Current Players:\n"
+	for(var/client/C)
+		n++
+		msg += "\t [C]\n"
+	msg += "Total Players: [n]"
+	return msg

@@ -271,13 +271,69 @@
 	for(var/obj/item/I in held_items)
 		qdel(I)
 
-// /mob/living/carbon/human/verb/get_weapon()
-// 	set name = "get-weapon"
-// 	set hidden = 1
+/* Я с этим разбираться не буду, слишком ебано для того кто не знаком с ТГ.
+/mob/living/carbon/human/verb/get_weapon()
+	set name = "get-weapon"
+	set hidden = 1
 
-// 	var/obj/item/gun/I
-// 	if(ishuman(src))
-// 		if(get_active_held_item())
-// 			if(istype(get_active_held_item(), /obj/item/gun/))
-// 				I = get_active_held_item()
-// 				if(SLOT_BELT && istype(get_item_by_slot(SLOT_BELT), /obj/item/storage/belt/holster))
+	var/obj/item/gun/I
+	if(ishuman(src))
+		if(get_active_held_item())
+			if(istype(get_active_held_item(),/obj/item/gun/))
+				I = get_active_held_item()
+				if(belt && istype(belt,/obj/item/storage/belt/holster))
+					var/obj/item/weapon/storage/belt/holster/H = belt
+					if(H.can_be_inserted(I,1))
+						H.handle_item_insertion(I)
+						update_inv_hands()
+						return
+				else if(can_equip(I, SLOT_BELT, 1) && !belt)
+					equip_to_slot(I, SLOT_BELT)
+					update_inv_hands()
+					return
+				else if(can_equip(I, SLOT_S_STORE, 1) && !s_store)
+					equip_to_slot(I, SLOT_S_STORE)
+					update_inv_hands()
+					return
+		else
+			if(belt && istype(belt,/obj/item/storage/belt/holster))
+				var/obj/item/storage/belt/holster/B = belt
+				for(var/obj/item/gun/G in B)
+					if(istype(G, /obj/item/gun/ballistic/revolver))
+						for(var/obj/item/gun/ballistic/revolver/R in B)
+							if(R != G)
+								equip_to_slot(G, active_hand_index = 1)
+								equip_to_slot(R, active_hand_index = 2)
+								G = null
+								R = null
+								update_inv_belt(0)
+								a_intent = "grab"
+								hud_used.action_intent.icon_state = "grab"
+								visible_message("[usr] snatches his revolvers!", "<span class='notice'>You draw you revolvers in one fast, flicky motion.</span>")
+								return
+					if(active_hand_index == 1)
+						equip_to_slot(G, active_hand_index = 1)
+					else
+						equip_to_slot(G, active_hand_index = 2)
+					update_inv_belt(0)
+					return
+
+			if(belt && istype(belt,/obj/item/gun))
+				I = belt
+				if(active_hand_index == 1)
+					equip_to_slot(I, active_hand_index = 1)
+				else
+					equip_to_slot(I, active_hand_index = 2)
+				belt = null
+				update_inv_belt(0)
+				return
+			else if(s_store && istype(s_store,/obj/item/gun))
+				I = s_store
+				if(active_hand_index == 1)
+					equip_to_slot(I, active_hand_index = 1)
+				else
+					equip_to_slot(I, active_hand_index = 2)
+				s_store = null
+				update_inv_s_store(0)
+				return
+*/

@@ -84,8 +84,9 @@
 			return	
 		else	
 			delay = delay*SW_LIGHT_FACTOR // hippie end	
-		
-		
+
+	mob.glide_size = 32/(delay/10*min(32, world.fps)) //Smart Smooth Movement
+
 	//We are now going to move
 	var/add_delay = mob.movement_delay()
 	if(old_move_delay + (add_delay*MOVEMENT_DELAY_BUFFER_DELTA) + MOVEMENT_DELAY_BUFFER > world.time)

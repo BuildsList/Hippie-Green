@@ -38,7 +38,6 @@
 		world << "pew"
 		return
 	var/query = "http://[CONFIG_GET(string/webhook_address)]?key=[CONFIG_GET(string/webhook_key)]&method=[method]&data=[url_encode(list2json(data))]"
-	world << query
 
 	spawn(-1)
 		world.Export(query)

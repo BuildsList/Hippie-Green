@@ -11,6 +11,8 @@
 
 /obj/machinery/computer/launchpad/Initialize()
 	launchpads = list()
+	for(var/obj/machinery/launchpad/L in range(1,src))
+		launchpads += L
 	. = ..()
 
 /obj/machinery/computer/launchpad/attack_paw(mob/user)

@@ -37,7 +37,7 @@
 			living_aliens = TRUE
 
 	if(living_aliens || fake)
-		priority_announce("Неизвестные формы жизни были замечены на борту [station_name()]. Следите за любыми внешними выходами, включая вентиляцию.", "Lifesign Alert", 'sound/ai/aliens.ogg')
+		priority_announce("Неизвестные формы жизни были замечены на борту [station_name()]. Рекомендуется уделить внимание вентиляционным выходам.", "Lifesign Alert", 'sound/ai/aliens.ogg')
 
 
 /datum/round_event/ghost_role/alien_infestation/spawn_role()

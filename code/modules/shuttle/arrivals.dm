@@ -70,7 +70,7 @@
 		if(!CheckTurfsPressure())
 			damaged = FALSE
 			if(console)
-				console.say("Repairs complete, launching soon.")
+				console.say("Ремонт завершен, запуск будет произведен немедленнно.")
 		return
 
 //If this proc is high on the profiler add a cooldown to the stuff after this line
@@ -155,7 +155,7 @@
 	. = ..()
 	if(!. && !docked && !damaged)
 		if(console)
-			console.say("Welcome to your new life, employees!")
+			console.say("Добро пожаловать в новую жизнь, персонал!")
 		for(var/L in queued_announces)
 			var/datum/callback/C = L
 			C.Invoke()
@@ -189,7 +189,7 @@
 
 	Launch(TRUE)
 
-	to_chat(user, "<span class='notice'>Calling your shuttle. One moment...</span>")
+	to_chat(user, "<span class='notice'>Вызываю шатлл. Один момент...</span>")
 	while(mode != SHUTTLE_CALL && !damaged)
 		stoplag()
 

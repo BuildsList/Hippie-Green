@@ -8,13 +8,7 @@
 	announceWhen	= 1
 
 /datum/round_event/processor_overload/announce(fake)
-	var/alert = pick(	"Exospheric bubble inbound. Processor overload is likely. Please contact you*%xp25)`6cq-BZZT", \
-						"Exospheric bubble inbound. Processor overload is likel*1eta;c5;'1vВ¬-BZZZT", \
-						"Exospheric bubble inbound. Processor ov#MCi46:5.;@63-BZZZZT", \
-						"Exospheric bubble inbo'Fz\\k55_@-BZZZZZT", \
-						"Exospheri:%ВЈ QCbyj^j</.3-BZZZZZZT", \
-						"!!hy%;f3l7e,<$^-BZZZZZZZT")
-
+	var/alert = "Замечен экзосферный пузырь. Возможна перегрузка процессоров. Пожалуйста свяжитесь со св*%xp25)`6cq-BZZT"
 	for(var/mob/living/silicon/ai/A in GLOB.ai_list)
 	//AIs are always aware of processor overload
 		to_chat(A, "<br><span class='warning'><b>[alert]</b></span><br>")

@@ -1,9 +1,9 @@
 /datum/language/swarmer
 	name = "Swarmer"
 	desc = "A language only consisting of musical notes."
-	speech_verb = "tones"
-	ask_verb = "tones inquisitively"
-	exclaim_verb = "tones loudly"
+	speech_verb = "интонирует"
+	ask_verb = "вопросительно интонирует"
+	exclaim_verb = "громко интонирует"
 	spans = list(SPAN_ROBOT)
 	key = "s"
 	flags = NO_STUTTER

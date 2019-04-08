@@ -1,9 +1,9 @@
 /datum/language/machine
 	name = "Encoded Audio Language"
 	desc = "An efficient language of encoded tones developed by synthetics and cyborgs."
-	speech_verb = "whistles"
-	ask_verb = "chirps"
-	exclaim_verb = "whistles loudly"
+	speech_verb = "свистит"
+	ask_verb = "щебечет"
+	exclaim_verb = "громко свистит"
 	spans = list(SPAN_ROBOT)
 	key = "6"
 	flags = NO_STUTTER

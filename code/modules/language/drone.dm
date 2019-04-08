@@ -1,9 +1,9 @@
 /datum/language/drone
 	name = "Drone"
 	desc = "A heavily encoded damage control coordination stream, with special flags for hats."
-	speech_verb = "chitters"
-	ask_verb = "chitters inquisitively"
-	exclaim_verb = "chitters loudly"
+	speech_verb = "щелкает"
+	ask_verb = "щелкает с любопытством"
+	exclaim_verb = "громко щелкает"
 	spans = list(SPAN_ROBOT)
 	key = "d"
 	flags = NO_STUTTER

@@ -1,9 +1,9 @@
 /datum/language/xenocommon
 	name = "Xenomorph"
 	desc = "The common tongue of the xenomorphs."
-	speech_verb = "hisses"
-	ask_verb = "hisses"
-	exclaim_verb = "hisses"
+	speech_verb = "шипит"
+	ask_verb = "шипит"
+	exclaim_verb = "шипит"
 	key = "4"
 	syllables = list("sss","sSs","SSS")
 	default_priority = 50

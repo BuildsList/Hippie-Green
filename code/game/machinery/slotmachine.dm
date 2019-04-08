@@ -118,10 +118,10 @@
 		else
 			if(paymode == HOLOCHIP)
 				paymode = COIN
-				visible_message("<b>[src]</b> says, 'This machine now works with COINS!'")
+				visible_message("<b>[src]</b> говорит, 'This machine now works with COINS!'")
 			else
 				paymode = HOLOCHIP
-				visible_message("<b>[src]</b> says, 'This machine now works with HOLOCHIPS!'")
+				visible_message("<b>[src]</b> говорит, 'This machine now works with HOLOCHIPS!'")
 	else
 		return ..()
 
@@ -327,7 +327,7 @@
 /obj/machinery/computer/slot_machine/proc/dispense(amount = 0, cointype = /obj/item/coin/silver, mob/living/target, throwit = 0)
 	if(paymode == HOLOCHIP)
 		var/obj/item/holochip/H = new /obj/item/holochip(loc,amount)
-		
+
 		if(throwit && target)
 			H.throw_at(target, 3, 10)
 	else

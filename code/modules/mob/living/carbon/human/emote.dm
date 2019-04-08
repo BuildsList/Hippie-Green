@@ -4,45 +4,45 @@
 /datum/emote/living/carbon/human/cry
 	key = "cry"
 	key_third_person = "cries"
-	message = "cries."
+	message = "плачет."
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/carbon/human/dap
 	key = "dap"
 	key_third_person = "daps"
-	message = "sadly can't find anybody to give daps to, and daps themself. Shameful."
-	message_param = "give daps to %t."
+	message = "к сожалению вокруг нет никого, кого можно шлепнуть, поэтому вы шлепаете себя. Стыдно."
+	message_param = "шлепает %t."
 	restraint_check = TRUE
 
 /datum/emote/living/carbon/human/eyebrow
 	key = "eyebrow"
-	message = "raises an eyebrow."
+	message = "поднимает бровь."
 
 /datum/emote/living/carbon/human/grumble
 	key = "grumble"
 	key_third_person = "grumbles"
-	message = "grumbles!"
+	message = "ворчит!"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/carbon/human/handshake
 	key = "handshake"
 	message = "shakes their own hands."
-	message_param = "shakes hands with %t."
+	message_param = "пожимает руку %t."
 	restraint_check = TRUE
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/carbon/human/hug
 	key = "hug"
 	key_third_person = "hugs"
-	message = "hugs themself."
-	message_param = "hugs %t."
+	message = "обнимает себя."
+	message_param = "обнимает %t."
 	restraint_check = TRUE
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/carbon/human/mumble
 	key = "mumble"
 	key_third_person = "mumbles"
-	message = "mumbles!"
+	message = "бормочет!"
 	emote_type = EMOTE_AUDIBLE
 
 /* hippie start -- Removed in favor of a /living/scream for borgs too,and with our sounds
@@ -73,12 +73,12 @@ hippie end */
 
 /datum/emote/living/carbon/human/pale
 	key = "pale"
-	message = "goes pale for a second."
+	message = "на секунду бледнеет."
 
 /datum/emote/living/carbon/human/raise
 	key = "raise"
 	key_third_person = "raises"
-	message = "raises a hand."
+	message = "поднимает руку."
 	restraint_check = TRUE
 
 /datum/emote/living/carbon/human/salute
@@ -91,12 +91,12 @@ hippie end */
 /datum/emote/living/carbon/human/shrug
 	key = "shrug"
 	key_third_person = "shrugs"
-	message = "shrugs."
+	message = "пожимает плечами."
 
 /datum/emote/living/carbon/human/wag
 	key = "wag"
 	key_third_person = "wags"
-	message = "wags their tail."
+	message = "виляет хвостом."
 
 /datum/emote/living/carbon/human/wag/run_emote(mob/user, params)
 	. = ..()

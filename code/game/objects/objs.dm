@@ -246,5 +246,5 @@
 		if(!unique_reskin[choice])
 			return
 		current_skin = choice
-		icon_state = unique_reskin[choice]
+		icon_state = "[unique_reskin[choice]]"
 		to_chat(M, "[src] is now skinned as '[choice].'")
